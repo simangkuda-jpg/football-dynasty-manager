@@ -19,6 +19,9 @@ jobs:
       - name: Generate platform folders
         run: flutter create --platforms=android --org com.districtcountry --project-name football_dynasty_manager .
 
+      - name: Fix Kotlin version
+        run: sed -i 's/id "org.jetbrains.kotlin.android" version "[^"]*" apply false/id "org.jetbrains.kotlin.android" version "1.9.24" apply false/' android/settings.gradle
+
       - name: Get dependencies
         run: flutter pub get
 
