@@ -63,9 +63,9 @@ class SeedData {
         name: clubNames[i],
         leagueId: 'league_main',
         reputation: reputation,
-        financeBalance: 500000 + rng.nextInt(2000000),
-        wageBudget: 50000 + rng.nextInt(150000),
-        transferBudget: 500000 + rng.nextInt(5000000),
+        financeBalance: (500000 + rng.nextInt(2000000)).toDouble(),
+        wageBudget: (50000 + rng.nextInt(150000)).toDouble(),
+        transferBudget: (500000 + rng.nextInt(5000000)).toDouble(),
         squadPlayerIds: squadIds,
         tactic: Tactic(),
       ));
